@@ -1,0 +1,23 @@
+name: Markdown checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required documentation
+        run: |
+          test -s README.md
+          test -s SECURITY.md
+          test -s CONTRIBUTING.md
+          test -s checklists/pre-deployment.md
+          test -s checklists/security-hardening.md
+          test -s templates/release-checklist.md
