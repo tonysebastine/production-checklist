@@ -23,6 +23,19 @@ A practical, technology-agnostic production-readiness checklist for applications
 - [Monitoring and alerting](checklists/monitoring-and-alerting.md)
 - [Rollback and disaster recovery](checklists/rollback-and-disaster-recovery.md)
 
+## Automated audit engine
+
+A read-only heuristic scanner is available in [`audit_engine/audit.py`](audit_engine/audit.py). It inventories text files, checks 43 production-readiness controls for evidence hints, detects selected secret patterns without printing matched values, and emits Markdown/JSON reports. It is triage only: matches are not proof of secure implementation, and no match is not proof of absence.
+
+Run from the repository root with Python 3.11+ (standard library only):
+
+```bash
+python audit_engine/audit.py /path/to/application --markdown audit-report.md --json audit-report.json
+python -m unittest discover -s tests -v
+```
+
+The scanner does not modify the target repository. Review reports carefully before sharing because file paths and line numbers may still reveal internal structure. Do not commit reports containing sensitive metadata without review.
+
 ## Templates
 - [Release readiness](templates/release-checklist.md)
 - [Incident report](templates/incident-report.md)
