@@ -65,9 +65,9 @@ PLACEHOLDERS = {"changeme","change_me","replace_me","your_secret_here","example"
 
 def read_files(root: Path):
     for path in sorted(root.rglob("*")):
-        if not path.is_file() or path.is_symlink() or any(p in SKIP for p in path.parts):
+        if not path.is_file() or path.is_symlink() or any(p in SKIP for p in path.relative_to(root).parts[:-1]):
             continue
-        if path.suffix.lower() not in SUFFIXES and path.name.lower() not in {".env.example",".env.sample",".env.template","dockerfile"}:
+        if path.suffix.lower() not in SUFFIXES and not path.name.lower().startswith(".env") and path.name.lower() != "dockerfile":
             continue
         try:
             if path.stat().st_size <= MAX_BYTES:
@@ -80,7 +80,7 @@ def audit(target: Path) -> dict[str, Any]:
     if not root.is_dir():
         raise ValueError(f"Target is not a directory: {root}")
     files = list(read_files(root))
-    corpus = [(p.relative_to(root).as_posix(), txt) for p,txt in files]
+    corpus = [(p.relative_to(root).as_posix(), txt) for p,txt in files if p.suffix.lower() not in {".md", ".txt"}]
     controls = []
     for ctl in CONTROLS:
         evidence = []
