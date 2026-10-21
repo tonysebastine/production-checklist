@@ -15,6 +15,7 @@ A practical, technology-agnostic production-readiness checklist for applications
 - [Pre-deployment](checklists/pre-deployment.md)
 - [Post-deployment](checklists/post-deployment.md)
 - [Security hardening](checklists/security-hardening.md)
+- [Exhaustive production-readiness audit](checklists/exhaustive-production-readiness.md)
 - [Server health](checklists/server-health.md)
 - [Backup and restore](checklists/backup-and-restore.md)
 - [Database reliability](checklists/database.md)
