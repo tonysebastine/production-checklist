@@ -11,6 +11,8 @@ A practical, technology-agnostic production-readiness checklist for applications
 4. Never mark a control Pass without current evidence.
 5. Run destructive checks only in an authorized environment with an approved rollback plan.
 
+> **Using with Existing Projects & Antigravity IDE:** See [**`HOW-TO-USE-WITH-EXISTING-PROJECTS.md`**](HOW-TO-USE-WITH-EXISTING-PROJECTS.md) for multi-root workspaces, Git submodules, and automated audit workflows.
+
 ## Checklists
 - [Pre-deployment](checklists/pre-deployment.md)
 - [Post-deployment](checklists/post-deployment.md)

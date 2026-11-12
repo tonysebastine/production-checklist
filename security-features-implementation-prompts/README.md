@@ -10,6 +10,12 @@ Each area includes prompt templates covering:
 
 ---
 
+## Documentation & Agent Guides
+- [**Antigravity IDE Workflow Guide (`ANTIGRAVITY-IDE-GUIDE.md`)**](ANTIGRAVITY-IDE-GUIDE.md): How to use slash commands (`/plan`, `/goal`, `/grill-me`), workspace rules, and prompts inside Antigravity IDE.
+- [**Agent Execution Protocol (`AGENT-GUIDE.md`)**](AGENT-GUIDE.md): System instructions, security invariants, technology matrices, and execution lifecycle for AI agents implementing these prompts.
+- [**Antigravity Workspace Rules (`.gemini/rules/security-rules.md`)**](../.gemini/rules/security-rules.md): Native rule file automatically enforced by Antigravity IDE in this workspace.
+- [**Prompt Authoring Template**](../templates/security-feature-prompt-template.md): Standard template to author new security prompts for AI coding agents.
+
 ## Security Domains & Implementation Areas
 
 | Area Directory | Scope & Implementation Topics | Prompt Guide |
