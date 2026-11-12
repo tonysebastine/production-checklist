@@ -23,6 +23,21 @@ A practical, technology-agnostic production-readiness checklist for applications
 - [Monitoring and alerting](checklists/monitoring-and-alerting.md)
 - [Rollback and disaster recovery](checklists/rollback-and-disaster-recovery.md)
 
+## Security Feature Implementation Prompts
+Ready-to-use AI prompts to implement, harden, and test production security features:
+- [Security Features Implementation Prompts Overview](security-features-implementation-prompts/README.md)
+  - [01 - Authentication & Sessions](security-features-implementation-prompts/01-authentication-and-sessions/README.md)
+  - [02 - Authorization & Access Control](security-features-implementation-prompts/02-authorization-and-access-control/README.md)
+  - [03 - Input Validation & Sanitization](security-features-implementation-prompts/03-input-validation-and-sanitization/README.md)
+  - [04 - Cryptography & Secrets Management](security-features-implementation-prompts/04-cryptography-and-secrets-management/README.md)
+  - [05 - API Security & Rate Limiting](security-features-implementation-prompts/05-api-security-and-rate-limiting/README.md)
+  - [06 - Security Headers & CORS](security-features-implementation-prompts/06-security-headers-and-cors/README.md)
+  - [07 - Audit Logging & Monitoring](security-features-implementation-prompts/07-audit-logging-and-monitoring/README.md)
+  - [08 - CI/CD & Supply Chain Security](security-features-implementation-prompts/08-cicd-and-supply-chain/README.md)
+  - [09 - Cloud & Infrastructure Hardening](security-features-implementation-prompts/09-cloud-and-infrastructure-hardening/README.md)
+  - [10 - AI & LLM Security](security-features-implementation-prompts/10-ai-and-llm-security/README.md)
+  - [11 - Document Integrity & Verification](security-features-implementation-prompts/11-document-integrity-and-verification/README.md)
+
 ## Templates
 - [Release readiness](templates/release-checklist.md)
 - [Incident report](templates/incident-report.md)
